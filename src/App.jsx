@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Signin from "./page/auth/Signup";
-import Signup from "./page/auth/Signin";
+import Signin from "./page/auth/Signin";
+import Signup from "./page/auth/Signup";
 
 const App = () => {
   return (
-    <div className="text-primary bg-bg-main">
+    <div className="text-text-primary bg-background">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Signin />} />

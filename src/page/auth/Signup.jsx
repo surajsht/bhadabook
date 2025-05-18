@@ -6,8 +6,8 @@ const Signup = () => {
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-[90%] rounded-lg bg-white p-6 shadow-lg sm:w-[28rem]">
         <div className="mb-6 text-center">
-          <h1 className="inline-block bg-black px-4 pt-2 font-lily text-7xl text-white">
-            B
+          <h1 className="inline-block bg-black px-5 pb-1 pt-3 font-lily text-7xl text-white">
+            Bb
           </h1>
         </div>
 
@@ -17,7 +17,7 @@ const Signup = () => {
 
         <form>
           <div className="mb-2">
-            <label htmlFor="name" className="text-secondary">
+            <label htmlFor="name" className="text-text-secondary">
               Name
             </label>
             <input
@@ -28,7 +28,7 @@ const Signup = () => {
           </div>
 
           <div className="mb-2">
-            <label htmlFor="email" className="text-secondary">
+            <label htmlFor="email" className="text-text-secondary">
               Email
             </label>
             <input
@@ -39,7 +39,7 @@ const Signup = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="password" className="text-secondary">
+            <label htmlFor="password" className="text-text-secondary">
               Password
             </label>
             <input
@@ -51,7 +51,7 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="text-md mb-2 me-2 w-full rounded-lg bg-bg-light-blue px-5 py-2 font-medium text-white hover:bg-bg-dark-blue focus:bg-bg-light-blue focus:outline-none focus:ring-2"
+            className="text-md bg-primary hover:bg-primary-dark focus:bg-primary-dark mb-2 me-2 w-full rounded-lg px-5 py-2 font-medium text-white focus:outline-none focus:ring-2"
           >
             Sign up
           </button>
@@ -68,8 +68,8 @@ const Signup = () => {
         <p className="mt-4 text-center">
           Already have an account?
           <Link
-            to="/signup"
-            className="ml-2 font-semibold hover:text-text-hover"
+            to="/"
+            className="ml-2 font-semibold text-primary hover:text-primary-dark"
           >
             Sign in
           </Link>
