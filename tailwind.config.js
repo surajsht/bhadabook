@@ -22,6 +22,10 @@ export default {
         "text-secondary": "#6B7280",
       },
     },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
   },
   plugins: [],
 };
