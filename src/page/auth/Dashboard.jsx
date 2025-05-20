@@ -13,8 +13,8 @@ const Dashboard = () => {
       <Navbar />
 
       <div className="container mx-auto mt-12">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex-1 rounded-xl border-2 px-6 py-10">
+        <div className="flex flex-wrap gap-4 justify-between">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] rounded-xl border-2 px-6 py-10 md:flex-auto">
             <div className="mb-3 flex items-center gap-4">
               <div className="relative rounded-full p-3 before:absolute before:inset-0 before:z-0 before:rounded-full before:bg-slate-300 before:opacity-25">
                 <FaUser className="text-xl text-primary" />
@@ -24,7 +24,7 @@ const Dashboard = () => {
             <span className="text-lg"> Total Tenants </span>
           </div>
 
-          <div className="flex-1 rounded-xl border-2 px-6 py-10">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] rounded-xl border-2 px-6 py-10 md:flex-auto">
             <div className="mb-3 flex items-center gap-4">
               <div className="relative rounded-full p-3 before:absolute before:inset-0 before:z-0 before:rounded-full before:bg-slate-300 before:opacity-25">
                 <FaEuroSign className="text-xl text-primary" />
@@ -36,7 +36,7 @@ const Dashboard = () => {
             <span className="text-lg"> Total Collected </span>
           </div>
 
-          <div className="flex-1 rounded-xl border-2 px-6 py-10">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] rounded-xl border-2 px-6 py-10 md:flex-auto">
             <div className="mb-3 flex items-center gap-4">
               <div className="relative rounded-full p-3 before:absolute before:inset-0 before:z-0 before:rounded-full before:bg-slate-300 before:opacity-25">
                 <FaRegClock className="text-xl text-primary" />
@@ -48,7 +48,7 @@ const Dashboard = () => {
             <span className="text-lg"> Total Pending </span>
           </div>
 
-          <div className="flex-1 rounded-xl border-2 px-6 py-10">
+          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] rounded-xl border-2 px-6 py-10 md:flex-auto">
             <div className="mb-3 flex items-center gap-4">
               <div className="relative rounded-full p-3 before:absolute before:inset-0 before:z-0 before:rounded-full before:bg-slate-300 before:opacity-25">
                 <RiWallet3Fill className="text-xl text-primary" />
@@ -65,7 +65,7 @@ const Dashboard = () => {
       <RecentTransaction />
 
       <div className="container mt-12 pb-12">
-        <div className="flex justify-between gap-6">
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
           <BarChart />
           <DoughnutChart />
         </div>

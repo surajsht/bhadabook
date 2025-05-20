@@ -83,7 +83,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`fixed bottom-0 top-0 h-full w-full bg-slate-200 p-8 pt-20 transition-all duration-300 sm:w-56 ${enableNav ? "right-0" : "sm:-right-[14rem] -right-full"} dark:bg-[#121212]`}
+          className={`fixed bottom-0 top-0 h-full w-full bg-slate-200 p-8 pt-20 transition-all duration-300 sm:w-56 ${enableNav ? "right-0" : "sm:-right-[14rem] -right-full"} dark:bg-[#121212] z-50`}
         >
           <ul className="flex flex-col gap-6">
             <li> Dashboard </li>

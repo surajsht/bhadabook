@@ -38,7 +38,7 @@ const DoughnutChart = () => {
         Rent Distribution
       </h2>
 
-      <div className="flex h-96 items-center justify-center">
+      <div className="flex h-72 items-center justify-center sm:h-80 md:h-96 lg:h-64 xl:h-80">
         <Doughnut data={data} options={options} />
       </div>
     </div>
