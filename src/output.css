@@ -633,6 +633,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .me-2 {
   margin-inline-end: 0.5rem;
 }
@@ -653,6 +657,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -665,6 +673,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -675,6 +687,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .min-h-screen {
@@ -695,10 +711,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.max-w-\[72rem\] {
-  max-width: 72rem;
 }
 
 .flex-1 {
@@ -727,8 +739,8 @@ video {
   justify-content: space-between;
 }
 
-.gap-12 {
-  gap: 3rem;
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -739,8 +751,12 @@ video {
   gap: 1rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .rounded-full {
@@ -767,9 +783,32 @@ video {
   border-width: 2px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#b9f3ce\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 243 206 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#fcd5ce\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 213 206 / var(--tw-bg-opacity, 1));
 }
 
 .bg-background {
@@ -804,6 +843,11 @@ video {
   padding: 1.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -817,6 +861,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-10 {
@@ -834,14 +883,14 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .py-8 {
@@ -853,8 +902,20 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -886,6 +947,10 @@ video {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
 }
 
 .text-lg {
@@ -940,6 +1005,11 @@ video {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .transition-colors {
