@@ -5,7 +5,7 @@ import Dashboard from "./page/auth/Dashboard";
 
 const App = () => {
   return (
-    <div className="text-text-primary bg-background font-inter">
+    <div className="text-text-primary bg-background font-inter dark:bg-dark-background dark:text-white">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Signin />} />

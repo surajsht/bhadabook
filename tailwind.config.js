@@ -18,6 +18,7 @@ export default {
         danger: "#DC2626",
         warning: "#FACC15",
         background: "#F9FAFB",
+        "dark-background": "#1A1A1A",
         "text-primary": "#111827",
         "text-secondary": "#6B7280",
       },
