@@ -32,7 +32,7 @@ const BarChart = () => {
 
   return (
     <div className="h-96 flex-1">
-      <h2 class="mb-8 font-poppins text-2xl font-semibold">
+      <h2 className="mb-8 font-poppins text-2xl font-semibold">
         Monthly Rent Collection
       </h2>
 

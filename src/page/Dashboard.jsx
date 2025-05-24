@@ -1,11 +1,11 @@
-import Navbar from "../../component/Navbar";
+import Navbar from "../component/Navbar";
 import { FaUser } from "react-icons/fa";
 import { FaEuroSign } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { RiWallet3Fill } from "react-icons/ri";
-import RecentTransaction from "../../component/RecentTransaction";
-import BarChart from "../../component/BarChart";
-import DoughnutChart from "../../component/DoughnutChart";
+import RecentTransaction from "../component/RecentTransaction";
+import BarChart from "../component/BarChart";
+import DoughnutChart from "../component/DoughnutChart";
 
 const Dashboard = () => {
   return (

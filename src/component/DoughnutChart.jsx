@@ -34,7 +34,7 @@ const DoughnutChart = () => {
 
   return (
     <div className="flex-1">
-      <h2 class="mb-8 font-poppins text-2xl font-semibold">
+      <h2 className="mb-8 font-poppins text-2xl font-semibold">
         Rent Distribution
       </h2>
 
