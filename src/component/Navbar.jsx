@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
       <div className="container hidden py-8 lg:block">
         <div className="flex items-center justify-between">
           <h1 className="font-lily text-3xl font-bold text-primary">
-            BhadaBook
+            <Link to="/dashboard">BhadaBook</Link>
           </h1>
 
           <ul className="flex items-center gap-10">
@@ -83,7 +84,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`fixed bottom-0 top-0 h-full w-full bg-slate-200 p-8 pt-20 transition-all duration-300 sm:w-56 ${enableNav ? "right-0" : "sm:-right-[14rem] -right-full"} dark:bg-[#121212] z-50`}
+          className={`fixed bottom-0 top-0 h-full w-full bg-slate-200 p-8 pt-20 transition-all duration-300 sm:w-56 ${enableNav ? "right-0" : "-right-full sm:-right-[14rem]"} z-50 dark:bg-[#121212]`}
         >
           <ul className="flex flex-col gap-6">
             <li> Dashboard </li>

@@ -1,7 +1,81 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import { auth } from "../../firebase/FireConfig";
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  updateProfile,
+} from "firebase/auth";
+import { FadeLoader } from "react-spinners";
 
 const Signup = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    if (
+      formData.name === "" &&
+      formData.email === "" &&
+      formData.password === ""
+    ) {
+      setError("Please provide valid details");
+      return;
+    }
+
+    if (formData.name === "" && formData.email && formData.password) {
+      setError("Error: Name missing");
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password,
+      );
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+      alert(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGoogleSignup = async () => {
+    try {
+      await signInWithPopup(auth, provider);
+      await updateProfile(auth.currentUser, {
+        displayName: formData.name,
+      });
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Google sign-in error:", error.message);
+      alert(error.message);
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-[90%] rounded-lg bg-white p-6 shadow-lg sm:w-[28rem]">
@@ -15,7 +89,9 @@ const Signup = () => {
           Sign up
         </h2>
 
-        <form>
+        {error && <span className="my-4 block text-danger"> {error} </span>}
+
+        <form onSubmit={handleSignup}>
           <div className="mb-2">
             <label htmlFor="name" className="text-text-secondary">
               Name
@@ -24,6 +100,8 @@ const Signup = () => {
               type="text"
               id="name"
               className="mt-1 block h-10 w-full rounded-md border-2 p-2"
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
 
@@ -35,6 +113,8 @@ const Signup = () => {
               type="email"
               id="email"
               className="mt-1 block h-10 w-full rounded-md border-2 p-2"
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
 
@@ -46,13 +126,31 @@ const Signup = () => {
               type="password"
               id="password"
               className="mt-1 block h-10 w-full rounded-md border-2 p-2"
+              value={formData.password}
+              onChange={handleChange}
             />
           </div>
 
           <button
             type="submit"
-            className="text-md bg-primary hover:bg-primary-dark focus:bg-primary-dark mb-2 me-2 w-full rounded-lg px-5 py-2 font-medium text-white focus:outline-none focus:ring-2"
+            className="text-md mb-2 me-2 flex w-full items-center justify-center gap-6 rounded-lg bg-primary px-5 py-2 font-medium text-white hover:bg-primary-dark focus:bg-primary-dark focus:outline-none focus:ring-2"
           >
+            {isLoading && (
+              <FadeLoader
+                color="#fff"
+                height={8}
+                width={4}
+                margin={1}
+                radius={1}
+                cssOverride={{
+                  transform: "scale(0.5)",
+                  height: "auto",
+                  width: "auto",
+                  top: "-2px",
+                  left: "auto",
+                }}
+              />
+            )}
             Sign up
           </button>
         </form>
@@ -61,7 +159,10 @@ const Signup = () => {
           <span className="relative z-20 bg-white px-3"> or </span>
         </div>
 
-        <button className="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-200 px-5 py-2.5 font-medium hover:bg-gray-100">
+        <button
+          className="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-200 px-5 py-2.5 font-medium hover:bg-gray-100"
+          onClick={handleGoogleSignup}
+        >
           <FcGoogle /> Sign up with Google
         </button>
 

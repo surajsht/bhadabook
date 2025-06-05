@@ -1,6 +1,10 @@
 import { IoSearch } from "react-icons/io5";
+import TenantModal from "./TenantModal";
+import { useState } from "react";
 
 const TenantToolbar = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="container">
       <div className="mt-12 flex flex-col justify-between gap-4 md:flex-row md:items-center">
@@ -20,10 +24,12 @@ const TenantToolbar = () => {
           <option>Left</option>
         </select>
 
-        <button className="w-full rounded bg-blue-600 px-6 py-2 text-white hover:bg-blue-700 md:w-auto">
+        <button className="w-full rounded bg-blue-600 px-6 py-2 text-white hover:bg-blue-700 md:w-auto"  onClick={() => setIsModalOpen(true)}>
           + Add Tenant
         </button>
       </div>
+
+      <TenantModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 const RecentTransaction = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -26,21 +25,11 @@ const RecentTransaction = () => {
           <table className="w-full border border-gray-200">
             <thead>
               <tr className="bg-gray-100 text-left">
-                <th className="border p-3">
-                  Tenant
-                </th>
-                <th className="border p-3">
-                  Room
-                </th>
-                <th className="border p-3">
-                  Due Date
-                </th>
-                <th className="border p-3">
-                  Paid Amount
-                </th>
-                <th className="border p-3">
-                  Status
-                </th>
+                <th className="border p-3">Tenant</th>
+                <th className="border p-3">Room</th>
+                <th className="border p-3">Due Date</th>
+                <th className="border p-3">Paid Amount</th>
+                <th className="border p-3">Status</th>
               </tr>
             </thead>
             <tbody className="">

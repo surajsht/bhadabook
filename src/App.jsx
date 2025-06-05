@@ -3,6 +3,7 @@ import Signin from "./page/auth/Signin";
 import Signup from "./page/auth/Signup";
 import Dashboard from "./page/Dashboard";
 import Tenants from "./page/Tenants";
+import "react-datepicker/dist/react-datepicker.css";
 
 const App = () => {
   return (
